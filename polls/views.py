@@ -22,6 +22,9 @@ def results(request, question_id):
     response = "You're looking at the results of question %s."
     return HttpResponse(response % question_id)
 
+def test(request):
+    response = "All you're going to se is this simple test message."
+    return HttpResponse(response)
 
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
